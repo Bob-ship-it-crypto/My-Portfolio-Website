@@ -43,7 +43,7 @@
         color: silver;
       }
       .home {
-        text-align: center;
+        text-align: justify;
         padding: 60px 20px;
       }
 
@@ -58,7 +58,7 @@
       }
       .home h1 {
         font-size: 40px;
-        color: white;
+        color: silver;
         margin-top: 20px;
       }
       .home p {
@@ -125,12 +125,15 @@
         box-shadow: lightgoldenrodyellow 7px 7px 15px;
       }
 
-      .competition img {
-        width: 100%;
-        height: 200px;
-        border-radius: 20px;
-        object-fit: cover;
-      }
+.competition img {
+  width: 100%;
+  height: auto;            /* keeps aspect ratio */
+  max-height: 200px;       /* optional: keeps cards consistent */
+  border-radius: 20px;
+  object-fit: contain;     /* shows the entire image */
+  background-color: #fff;  /* fills gaps if aspect ratio differs */
+}
+
 
       .competition p {
         color: white;
@@ -211,7 +214,7 @@
       }
 
       .home-box img:hover {
-        transform: rotate(5deg) scale(1.05);
+        transform: scale(1.05);
       }
 
       .home-box h1 {
@@ -645,6 +648,13 @@
         border-radius: 50%;
         margin-bottom: 12px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        object-position: center;
+        transition: transform 0.3s ease;
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 80px; /* Set a maximum width */
+        object-fit: contain; /* Ensure the entire image is visible */
+        
       }
       /* Organizations Title Styling */
       #organizations {
@@ -658,6 +668,7 @@
         position: relative;
         display: inline-block; /* allows underline animation */
         margin-bottom: 30px;
+        padding: 20px;
         transition: color 0.3s ease;
       }
 
@@ -695,7 +706,7 @@
       #organizations h2 {
         font-size: 32px;
         font-weight: 700;
-        color: gold;
+        color: silver;
         margin-bottom: 30px;
         position: relative;
         display: inline-block;
@@ -802,7 +813,7 @@
 
     <div class="home" id="home">
       <div class="home-box">
-        <img src="" alt="Biyan's Profile Photo" />
+        <img src="Profile Photo.jpeg" alt="Biyan's Profile Photo" />
         <h1><span id="typedText"></span></h1>
         <p>
           My name is
@@ -916,54 +927,65 @@
       <h2>My Competitions</h2>
       <div class="competitions-container">
         <div class="competition" data-aos="fade-up">
-          <img src="images (1).png" alt="SASMO Competition" />
+          <img src="SASMO.jpg" alt="SASMO Competition" />
           <p>
             SASMO (Singapore and Asian Schools Mathematical Olympiad) - Gold
             Medal 2023
           </p>
         </div>
         <div class="competition" data-aos="fade-up" data-aos-delay="100">
-          <img src="images (2).jpg" alt="SIMOC Competition" />
+          <img src="SIMOC.jpg" alt="SIMOC Competition" />
           <p>
-            SIMOC (Singapore International Mathematical Olympiad) - Gold Medal
+            SIMOC (Singapore International Mathematical Olympiad Challenge) - Gold Medal
             2024
           </p>
         </div>
         <div class="competition" data-aos="fade-up" data-aos-delay="200">
-          <img src="images.png" alt="HKIMO Competition" />
+          <img src="HKIMO.jpg" alt="HKIMO Competition" />
           <p>
             HKIMO (Hong Kong International Mathematical Olympiad) - Gold Medal
             2025
           </p>
         </div>
         <div class="competition" data-aos="fade-up" data-aos-delay="300">
-          <img src="images (1).jpg" alt="PHIMO Competition" />
+          <img src="PHIMO.jpg" alt="PHIMO Competition" />
           <p>
             PHIMO (Philippine International Mathematical Olympiad) - Gold Medal
             2024
           </p>
         </div>
         <div class="competition" data-aos="fade-up" data-aos-delay="400">
-          <a href="https://amo.sg/">
-            <img src="AMO-LOGO-flip1-288x300.png" alt="AMO Competition" />
+            <img src="AMO.jpg" alt="AMO Competition" />
           </a>
           <p>AMO (American Mathematical Olympiad) - Gold Medalist 2025</p>
         </div>
         <div class="competition" data-aos="fade-up" data-aos-delay="500">
-          <img src="images (3).jpg" alt="AIMO Competition" />
+          <img src="AIMO.jpg" alt="AIMO Competition" />
           <p>
             AIMO (Asian International Mathematical Olympiad) - Gold Medalist
             2025
           </p>
         </div>
         <div class="competition" data-aos="fade-up" data-aos-delay="600">
-          <img src="366113_990735.webp" alt="TIMO Competition" />
+          <img src="TIMO SOFT COPY.jpg" alt="TIMO Competition" />
           <p>
             TIMO (Thailand International Mathematical Olympiad) - Gold Medalist
             2025
           </p>
-        </div>
-      </div>
+          </div>
+        <div class="competition" data-aos="fade-up" data-aos-delay="600">
+          <img src="WMI.jpg" alt="WMI competition" />
+          <p>
+            WMI (World Mathematics Invitational) - Gold Medalist
+            2025
+          </p>
+          </div>
+        <div class="competition" data-aos="fade-up" data-aos-delay="600">
+          <img src="SEAMO SOFT COPY.jpg" alt="WMI competition" />
+          <p>
+            SEAMO (Southeast Asian Mathematical Olympiad) - Gold Medalist
+            2025
+          </p>
     </div>
     <!-- Organizations Section -->
     <div class="Organizations" id="organizations" data-aos="fade-up">
@@ -1019,16 +1041,16 @@
       </p>
       <div style="margin-top: 10px">
         <a
-          href="https://www.instagram.com"
+          href="https://www.whatsap.com"
           target="_blank"
           style="color: white; margin: 0 10px; text-decoration: none"
-          >Instagram</a
+          >Whatsapp</a
         >
         <a
           href="https://www.github.com"
           target="_blank"
           style="color: white; margin: 0 10px; text-decoration: none"
-          >GitHub</a
+          ></a
         >
         <a
           href="mailto:biyan@example.com"
@@ -1041,6 +1063,5 @@
     <script>
       AOS.init();
     </script>
-    <div class="badge-67">🏅 67</div>
   </body>
 </html>
